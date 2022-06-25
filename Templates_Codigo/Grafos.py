@@ -1,20 +1,3 @@
-from math import pi, sin, cos
-# macros
-
-def ri():
-    return int(input())
-
-
-def mi():
-    return map(int, input().split())
-
-def mf():
-    return map(float, input().split())
-
-
-def lis():
-    return list(map(int, input().split()))
-
 class Graph:
     def __init__(self, nNodes, edges):
         self.numNodes = nNodes
@@ -103,24 +86,3 @@ class Graph:
                 visited.extend(new_visited)
                 chunks += 1
         return chunks
-
-# main
-t = int(input())
-
-for i in range(t):
-    nNodes = ri()
-    nEdges = ri()
-    edges = []
-    for j in range(nEdges):
-        x, y = mi()
-        edges.append((x, y))
-
-    # instantiate the graph
-    graph = Graph(nNodes, edges)
-
-    promessa = graph.num_groups()-1
-
-    if promessa > 0:
-        print("Case #{}: ainda faltam(m) {} estrada(s)".format(i+1, promessa))
-    else:
-        print("Case #{}: a promessa foi cumprida".format(i+1))
