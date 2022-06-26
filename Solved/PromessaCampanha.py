@@ -1,6 +1,7 @@
 from math import pi, sin, cos
 # macros
 
+
 def ri():
     return int(input())
 
@@ -8,12 +9,31 @@ def ri():
 def mi():
     return map(int, input().split())
 
+
 def mf():
     return map(float, input().split())
 
 
 def lis():
     return list(map(int, input().split()))
+
+# create a graph class that can be used to represent a graph and has the following methods:
+# dfs(start) - returns a list of nodes in a depth first search starting from start
+# bfs(start) - returns a list of nodes in a breadth first search starting from start
+# add_edge(node1, node2) - adds an edge between node1 and node2
+# add_node(node) - adds a node to the graph
+# remove_edge(node1, node2) - removes an edge between node1 and node2
+# remove_node(node) - removes a node from the graph
+# get_neighbors(node) - returns a list of neighbors for the given node
+# get_edges() - returns a list of all edges in the graph
+# get_nodes() - returns a list of all nodes in the graph
+# get_degree(node) - returns the degree of the given node
+# get_degree_sequence() - returns a list of degrees for all nodes
+# is_connected() - returns True if the graph is connected, False otherwise
+# is_bipartite() - returns True if the graph is bipartite, False otherwise
+# is_eulerian() - returns True if the graph is eulerian, False otherwise
+# is_tree() - returns True if the graph is a tree, False otherwise
+
 
 class Graph:
     def __init__(self, nNodes, edges):
@@ -104,20 +124,40 @@ class Graph:
                 chunks += 1
         return chunks
 
+
 # main
 t = int(input())
 
+
 for i in range(t):
+    # check if input is a space or contains a space and remove it
+    if ' ' in input():
+        input()
     nNodes = ri()
+    if ' ' in input():
+        input()
     nEdges = ri()
     edges = []
     for j in range(nEdges):
+        if ' ' in input():
+            input()
         x, y = mi()
         edges.append((x, y))
 
     # instantiate the graph
     graph = Graph(nNodes, edges)
+    # print(graph.get_edges())
+    # print(graph.get_graph())
 
+    # do bfs and dfs
+    # print(graph.bfs(1))
+    # print(len(graph.bfs(1)))
+    # print(nNodes)
+    # print(graph.dfs(1))
+
+    # check if the graph is connected
+    # print("grupo eh conectado: ", graph.is_connected())
+    # print("numero de chunks conectados: ", graph.num_groups())
     promessa = graph.num_groups()-1
 
     if promessa > 0:
