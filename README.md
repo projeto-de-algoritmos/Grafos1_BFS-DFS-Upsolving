@@ -14,10 +14,13 @@ Resolver exercícios de competição abordando os temas do módulo de Grafos 1.
 ## Screenshots
 Estão disponibilizadas na pasta Jupyter dentro das soluções ".ipynb"
 
+## Video
+O vídeo da entrega está disponibilizado na pasta Video_Entrega. Está no formato ".mp4"
+
 ## Instalação 
 **Linguagem**: Python3 & C<br>
 **Framework**: Não foi utilizado<br>
 **Pre-Requisitos**: Python 3.10.4 & gcc 11.2.0<br>
 
 ## Uso 
-Usar os interpretadores das respectivas linguagens
+Usar os interpretadores das respectivas linguagens detalhes na pasta Solved
